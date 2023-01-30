@@ -17,7 +17,7 @@ class QuestionController extends AbstractController
         $formQuestion->handleRequest($request);
 
         if ($formQuestion->isSubmitted() && $formQuestion->isValid()) {
-            dd($formQuestion->getData());
+            
         }
 
         return $this->render('question/index.html.twig', [
