@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {# CSS de base #}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {# Icon #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        {# Fonts #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        {# JavaScript 'defer' pour l'asyncrone #}
+        <script defer src="{{ asset('js/main.js') }}"></script>
+    </head>
+
+    <body class="d-flex flex-column">
+        {# header #}
+        {% include "partials/_header.html.twig" %} 
+
+        <div class="app-content flex-fill d-flex flex-row-nowrap justify-content-center">
+            <div class="content d-flex flex-row-nowrap flex-fill py-50">
+                {# sidebar #}
+                {% include "partials/_sidebar.html.twig" %}
+
+                <div class="app-content flex-fill"> 
+                    {% block body %}{% endblock %} 
+                </div>
+            </div>
+        </div>
+
+        {# footer #}
+        {% include "partials/_footer.html.twig" %}
+    </body>
+</html>
