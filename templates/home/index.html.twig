@@ -6,21 +6,26 @@
     <ul>
         {% for question in questions %}
             <li class="block d-flex flex-row mb-20">
-                <div></div>
-                <div class="flex-fill d-flex flex-column">
-                    <div class="mb-20 question-content">
+                <div class="d-flex flex-column mr-20 align-items-center">
+                    <i class="fas fa-arrow-up"></i>
+                    <p>{{ question.rating }}</p>
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="d-flex flex-fill flex-column">
+                    <div class="question-content mb-20 pb-20">
                         <h3 class="mb-20">{{ question.title }}</h3>
                         <p>{{ question.content }}</p>
                     </div>
-// 12 minutes 03 secondes
+
                     <div class="d-flex flex-row justify-content-between">
                         <div class="d-flex flex-row align-items-center">
-                            <img class="mr-10 question-avatar" src="{{ question.author.avatar }}" alt="photo de profil de l'auteur de la question">
+                            <img class="avatar mr-10" src="{{ question.author.avatar }}" alt="photo de profil de l'auteur de la question">
                             <p>{{ question.author.name }}</p>
                         </div>
 
                         <div class="d-flex flex-row align-items-center">
-                            <i class="far fa-comment mr-10"></i>
+                            <i class="far fa-comment mr-5"></i>
                             <p>{{ question.nbrOfResponse }}</p>
                         </div>
                     </div>

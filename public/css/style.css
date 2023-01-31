@@ -126,7 +126,7 @@ ul {
     margin: 20px;
 }
 
-/* right */
+/* margin right */
 .mr-5 {
     margin-right: 5px;
 }
@@ -143,7 +143,7 @@ ul {
     margin-right: 50px;
 }
 
-/* bottom */
+/* margin bottom */
 .mb-5 {
     margin-bottom: 5px;
 }
@@ -167,6 +167,11 @@ ul {
 
 .p-20 {
     padding: 20px;
+}
+
+/* padding bottom */
+.pb-20 {
+    padding-bottom: 20px;
 }
 
 /* padding y (vertical) */
@@ -250,6 +255,11 @@ ul {
     font-weight: var(--font-weight-semi-bold);
 }
 
+.avatar {
+    width: 25px;
+    border-radius: 50%;
+}
+
 /* sidebar */
 .sidebar {
     min-width: 200px;
@@ -308,3 +318,9 @@ footer {
     background-color: var(--footer-background);
     color: var(--color-primary);
 }
+
+/* question */
+div.question-content {
+    border-bottom: 1px solid black;
+}
+
